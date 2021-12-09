@@ -21,6 +21,18 @@ pipeline {
               sh "wc -l *.py"
             }
         }
+        stage('Run Scripts') {
+        when {
+            expression {
+                ${TARGET} == 'run'
+            }
+        }
+        steps {
+              sh "python3 main.py phone text output"
+              sh "python3 main.py phone csv output"
+              sh "python3 main.py phone json output"
+            }
+        }
         stage('Zip') {
             steps {
                 sh "zip app.zip *.py"
