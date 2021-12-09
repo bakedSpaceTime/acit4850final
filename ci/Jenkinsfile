@@ -7,23 +7,23 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running The Requirements...'
-                sh "pip install -r ../requirements.txt"
+                sh "pip install -r requirements.txt"
                 echo 'Requirements Complete!'
             }
         }
         stage('Code Quality') {
             steps {
-              sh "pylint-fail-under --fail_under 7 ../*.py"
+              sh "pylint-fail-under --fail_under 7 *.py"
             }
         }
         stage('Code Quantity##############################') {
             steps {
-              sh "pylint-fail-under --fail_under 7 ../*.py"
+              sh "pylint-fail-under --fail_under 7 *.py"
             }
         }
         stage('Zip') {
             steps {
-                sh "zip app.zip ../*.py"
+                sh "zip app.zip *.py"
             }
             post {
                 always {
