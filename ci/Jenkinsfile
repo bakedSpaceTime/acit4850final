@@ -9,6 +9,8 @@ pipeline {
                 echo 'Running The Requirements...'
                 sh "pip install -r requirements.txt"
                 echo 'Requirements Complete!'
+                echo 'NAME: Tushya Iyer'
+                echo 'STUDENT NUMBER: A01023434'
             }
         }
         stage('Code Quality') {
