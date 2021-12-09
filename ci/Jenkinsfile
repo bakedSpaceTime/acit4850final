@@ -1,3 +1,14 @@
+/*
+
+Author: Tushya Iyer
+For: BCIT ACIT 4850 Final Exam
+Date: December 8th, 2021
+Description: Jenkins Pipeline for sample python application
+                Stages are Build, Code Quality, Code Quantity,
+                Run Scripts, and ZIP
+
+*/
+
 pipeline {
     agent any
     parameters {
