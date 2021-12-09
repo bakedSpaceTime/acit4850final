@@ -24,7 +24,7 @@ pipeline {
         stage('Run Scripts') {
         when {
             expression {
-                ${TARGET} == 'run'
+                "${TARGET}" == 'run'
             }
         }
         steps {
