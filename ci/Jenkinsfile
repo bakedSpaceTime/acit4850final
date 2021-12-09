@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(defaultValue: "", description: 'Run Target Scripts', name: 'TARGET')
+        string(defaultValue: "", description: 'Run Target Scripts', name: 'TARGET')
     }
     stages {
         stage('Build') {
@@ -24,7 +24,7 @@ pipeline {
         stage('Run Scripts') {
         when {
             expression {
-                "${TARGET}" == 'run'
+                params.TARGET == 'run'
             }
         }
         steps {
