@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running The Requirements...'
-                sh "pip install -r ./${buildDir}/requirements.txt"
+                sh "pip install -r ../requirements.txt"
                 echo 'Requirements Complete!'
             }
         }
