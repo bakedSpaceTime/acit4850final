@@ -21,6 +21,7 @@ pipeline {
                 sh "pip install -r requirements.txt"
                 echo 'Requirements Complete!'
                 echo 'NAME: Tushya Iyer'
+                echo 'GROUP: 7'
                 echo 'STUDENT NUMBER: A01023434'
             }
         }
