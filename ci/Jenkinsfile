@@ -16,9 +16,9 @@ pipeline {
               sh "pylint-fail-under --fail_under 7 *.py"
             }
         }
-        stage('Code Quantity##############################') {
+        stage('Code Quantity') {
             steps {
-              sh "pylint-fail-under --fail_under 7 *.py"
+              sh "ls *.py | wc -l"
             }
         }
         stage('Zip') {
